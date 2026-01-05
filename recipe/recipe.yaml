@@ -1,6 +1,6 @@
 context:
   name: witr
-  version: "0.1.0"
+  version: "0.1.7"
 
 package:
   name: ${{ name|lower }}
@@ -8,14 +8,13 @@ package:
 
 source:
   url: https://github.com/pranshuparmar/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 0cc73823129af9b4b183deeec31948df0fc27f231e2f697b678c5f44b575e43c
+  sha256: 6338acdd363614d3327e8b4826492b98133748997b43016354a45fa55e799eca
   target_directory: src
 
 build:
   number: 0
-  # https://github.com/pranshuparmar/witr/tree/v0.1.0?tab=readme-ov-file#9-platform-support
-  # https://github.com/pranshuparmar/witr/issues/13
-  skip: not linux
+  # https://github.com/pranshuparmar/witr/tree/v0.1.7?tab=readme-ov-file#9-platform-support
+  skip: not unix
   script:
     - cd src
     - go-licenses save ./cmd/witr --save_path ../library_licenses
