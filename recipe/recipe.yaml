@@ -13,8 +13,6 @@ source:
 
 build:
   number: 0
-  # https://github.com/pranshuparmar/witr/tree/v0.1.7?tab=readme-ov-file#9-platform-support
-  skip: not unix
   script:
     - cd src
     - go-licenses save ./cmd/witr --save_path ../library_licenses
