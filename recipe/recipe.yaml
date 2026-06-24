@@ -1,6 +1,6 @@
 context:
   name: witr
-  version: "0.3.2"
+  version: "0.3.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/pranshuparmar/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 4ba1bdb58845aa74a219e905003c3ea604985fd14162c47419954ece2b35410b
+  sha256: af94fe23b01f4b7c672278228efb4a2df622170e0a4ef0e475be337bad11146a
   target_directory: src
 
 build:
